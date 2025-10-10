@@ -25,12 +25,11 @@ def listar_aluno():
             return cursor.fetchall()
         except Exception as erro:
             print(f"Erro ao tentar exibir aluno: {erro}")
+            return[]
         finally:
             cursor.close()
             conexao.close()
 
-lista = listar_aluno()
-for linha in lista:
-    print(f" ID: {linha[0]} - NOME: {linha[1]} - IDADE: {linha[2]}")
+
 
             
