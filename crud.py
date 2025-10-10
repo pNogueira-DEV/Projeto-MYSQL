@@ -61,6 +61,10 @@ def deletar_alunos(id):
                 (id,)
             )
             conexao.commit()
+            if cursor.rowcount > 0:
+                print("Aluno removido com sucesso!")
+            else:
+                print("Nenhum aluno foi encontrado com o ID fornecido.")
         except Exception as erro:
             print(f"Erro ao tentar inserir aluno:{erro}")
         finally:
