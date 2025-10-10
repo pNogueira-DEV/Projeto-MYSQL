@@ -22,9 +22,18 @@ if menu == "Adicionar aluno":
             st.success(f"Aluno {nome} cadastrado com sucesso!")
         else:
             st.warning("O campo nome não pode ser vazio.")
-elif menu =="Listar alunos":
-    st.subheader ("Lista de alunos cadastrados. ")
+elif menu =="Listar aluno":
+    st.subheader ("Lista de aluno cadastrados. ")
     alunos = listar_aluno()
+    if alunos:
+        st.dataframe(alunos)
+    else:
+        st.info("Nenhum aluno cadastrado.")
+
+elif menu == "Atualizar idade":
+    st.subheader("Atualizar idade")
+    alunos = listar_aluno()
+    if alunos:
     
 
 
