@@ -13,7 +13,7 @@ def inserir_aluno(nome_aluno, idade_aluno):
             print(f"Erro ao tentar inserir aluno: {erro}")
         finally:
             cursor.close()
-            conexao.cloese()
+            conexao.close()
 
 def listar_aluno():
     conexao, cursor = conectar()
@@ -29,6 +29,7 @@ def listar_aluno():
         finally:
             cursor.close()
             conexao.close()
+            
 
 
 
