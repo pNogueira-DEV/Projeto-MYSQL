@@ -22,7 +22,7 @@ if menu == "Adicionar aluno":
             st.success(f"Aluno {nome} cadastrado com sucesso!")
         else:
             st.warning("O campo nome não pode ser vazio.")
-elif menu =="Listar aluno":
+elif menu =="Listar alunos":
     st.subheader ("Lista de aluno cadastrados. ")
     alunos = listar_aluno()
     if alunos:
@@ -50,6 +50,8 @@ elif menu == "Deletar aluno":
         if st.button("deletar"):
             deletar_alunos(id_aluno)
             st.success("Aluno deletado com sucesso!")
+        else:
+            st.info("Nenhum aluno disponível para deletar.")
 
 
 
